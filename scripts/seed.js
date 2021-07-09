@@ -1,13 +1,14 @@
-const db = require('../db')
+const db = require('../db');
 
-;(async () => {
+(async () => {
   try {
-    await db('users').insert({ name: 'John Doe' })
-    await db('users').insert({ name: 'Jane Doe' })
-    console.log('Added dummy users!')
-    process.exit(0)
+    await db('users').insert({ name: 'Person_1' });
+    await db('users').insert({ name: 'Person_2' });
+    await db('users').insert({ name: 'Person_3' });
+    console.log('Added dummy users!');
+    process.exit(0);
   } catch (err) {
-    console.log(err)
-    process.exit(1)
+    console.log(err);
+    process.exit(1);
   }
-})()
+})();
